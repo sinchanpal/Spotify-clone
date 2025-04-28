@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    transition: background-color 1s ease-in;
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.brand img {
+    width: 2rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.mainBox {
+    min-height: 74vh;
+    background-color: aqua;
+    font-family: "Winky Rough", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px auto;
+    width: 70%;
+    border-radius: 10px;
+    padding: 1rem;
+    background-image: url("images/girl-with-black-headphone\ copy.webp");
+
+    background-size: cover;
+    color: white;
+    transition: all 0.5s ease;
+    padding-bottom: 80px;
+}
+
+.opacityBox {
+    /* change */
+    min-height: 84.5vh;
+    width: 70%;
+    background-color: black;
+    opacity: 0.66;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
+.glowAnimation {
+    animation: glow 4s infinite ease-in-out;
+
+}
+
+
+
+
+
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px white, 0 0 10px blueviolet, 0 0 40px blueviolet, 0 0 70px blueviolet, 0 0 290px blueviolet;
+    }
+
+    25% {
+        box-shadow: 0 0 5px white, 0 0 10px #00f7ff, 0 0 40px #00f7ff, 0 0 70px #00f7ff, 0 0 290px #00f7ff;
+    }
+
+    50% {
+        box-shadow: 0 0 5px white, 0 0 10px #FFEB00, 0 0 40px #FFEB00, 0 0 70px #FFEB00, 0 0 290px #FFEB00;
+    }
+
+    100% {
+        box-shadow: 0 0 5px white, 0 0 10px blueviolet, 0 0 40px blueviolet, 0 0 70px blueviolet, 0 0 290px blueviolet;
+    }
+}
+
+.videoPlay {
+    height: 60vh;
+    width: 40%;
+    /* background-color: #00f7ff; */
+    border-radius: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.videoPlay video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4rem;
+    transition: all 1s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+.songItem {
+    height: 2.5rem;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin: 1.5rem 0;
+    border-radius: 30px;
+    gap: 1rem;
+    padding: 0.5rem;
+
+}
+
+.songItem img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    /* transition: all 0.5 ease-in; */
+
+}
+
+/* .songItem img:hover{
+    width: 2.5rem;
+    height:2.5rem;
+    
+} */
+
+.play {
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    color: blueviolet;
+}
+
+.play:hover {
+    font-size: 20px;
+    color: rgb(45, 226, 166);
+}
+
+.bottom {
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    opacity: 0.8;
+
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+.icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    color: white;
+    margin-top: 1rem;
+    font-family: "Winky Rough", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+
+}
+
+
+/* make it mobile friendly */
+@media(max-width:1300px) {   
+    #gif {
+        height: 70px;
+        width: 70px;
+    }
+
+    .opacityBox{
+        width: 70%;
+        min-height: 95vh;
+        border-radius: 10px;
+     }
+}
+
+@media (max-width:680px) {
+    .mainBox{
+        flex-direction: column;
+        padding-bottom: 2.5rem;
+        width: 95%;
+        height: auto;
+    }
+
+    .opacityBox{
+       width: 95%;
+       height: 147vh;
+    }
+
+    .videoPlay{
+        height: 40vh;
+        width: 80%;
+    }
+
+}
+
+@media (max-width:495px) {
+    
+    #gif {
+        height: 50px;
+        width: 20px;
+    }
+
+    #myProgressBar{
+       position: absolute;
+       top: 0;
+    }
+    .icons{
+        position: absolute;
+        right: 0;
+    }
+}
+
+
